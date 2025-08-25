@@ -7,16 +7,24 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.4.1"
+gem "jekyll", "~> 4.4"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"
+gem "minima", "~> 2.5"       # pin to latest released minima
+gem "jekyll-sass-converter", "~> 2.2"  # use SassC (no Dart Sass deprecation spam)
+gem "sassc", "~> 2.4"        # required by jekyll-sass-converter v2
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17"
 end
+
+# Ruby 3.x compat
+gem "bigdecimal"        # required by liquid on Ruby 3.4+
+gem "logger"            # silence Ruby 3.5 logger warning
+gem "webrick", "~> 1.8" # Ruby 3.x local server
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

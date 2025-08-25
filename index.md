@@ -46,8 +46,7 @@ header_pages:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-exclude:
-  - index.markdown
+# exclude:
 #   - .sass-cache/y
 #   - .jekyll-cache/
 #   - gemfiles/
