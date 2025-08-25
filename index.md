@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+Welcome to your new site!
