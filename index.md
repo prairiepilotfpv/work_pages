@@ -10,4 +10,3 @@ Welcome to your new site!
 {% if site.show_blog_on_home %}
   {% include posts.html %}
 {% endif %}
-
