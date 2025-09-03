@@ -29,9 +29,10 @@ github_username:  jekyll
 show_blog_on_home: false # set to true to display blog posts on the home page
 
 # Build settings
-theme: minima
+remote_theme: alshedivat/al-folio@v0.14.6
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Add header pages to control nav order in Minima
 header_pages:

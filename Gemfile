@@ -9,7 +9,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.4"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"       # pin to latest released minima
 gem "jekyll-sass-converter", "~> 2.2"  # use SassC (no Dart Sass deprecation spam)
 gem "sassc", "~> 2.4"        # required by jekyll-sass-converter v2
 
@@ -19,6 +18,7 @@ gem "sassc", "~> 2.4"        # required by jekyll-sass-converter v2
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-remote-theme"
 end
 
 # Ruby 3.x compat
