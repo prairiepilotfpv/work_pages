@@ -1,38 +1,40 @@
-source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-gem "jekyll", "~> 4.4"
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "jekyll-sass-converter", "~> 2.2"  # use SassC (no Dart Sass deprecation spam)
-gem "sassc", "~> 2.4"        # required by jekyll-sass-converter v2
+source 'https://rubygems.org'
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-# If you have any plugins, put them here!
+# Core Jekyll
+gem 'jekyll', '~> 4.4'
+gem 'jekyll-sass-converter', '~> 3.0' # uses Dart Sass via sass-embedded
+gem 'sass-embedded', '~> 1.75'
+
+# Jekyll plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.17"
-  gem "jekyll-remote-theme"
+  gem 'jekyll-feed', '~> 0.17'
+  gem 'jekyll-remote-theme'
+  gem 'jekyll-scholar'
+  gem 'jekyll-toc'
 end
 
-# Ruby 3.x compat
-gem "bigdecimal"        # required by liquid on Ruby 3.4+
-gem "logger"            # silence Ruby 3.5 logger warning
-gem "webrick", "~> 1.8" # Ruby 3.x local server
+# Ruby 3.x compatibility
+gem 'bigdecimal'        # required by liquid on Ruby 3.4+
+gem 'logger'            # silences Ruby 3.5 logger warning
+gem 'webrick', '~> 1.8' # local server on Ruby 3.x
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
+# Platform-specific dependencies
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
-  gem "tzinfo-data"
+  gem 'tzinfo', '>= 1', '< 3'
+  gem 'tzinfo-data'
 end
 
+gem 'wdm', '~> 0.1', platforms: [:mingw, :x64_mingw, :mswin]
+
+platforms :jruby do
+  # Lock http_parser.rb to v0.6.x on JRuby (no newer Java counterpart)
+  gem 'http_parser.rb', '~> 0.6.0'
+end
+
+# GitHub Pages:
+# If building with GitHub Pages, comment out the 'jekyll' gem above
+# and use the following instead to match the Pages environment:
+# gem 'github-pages', group: :jekyll_plugins
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
