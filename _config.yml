@@ -28,21 +28,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 show_blog_on_home: false # set to true to display blog posts on the home page
 
-# al-folio theme options
-max_width: 1100px
-
 # Build settings
-remote_theme: alshedivat/al-folio@v0.14.6
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
-  - jekyll-toc
-  - jekyll-scholar
-
-# Minimal scholar config (al-folio expects plugin available)
-scholar:
-  style: apa
-  locale: en
 
 # Add header pages to control nav order in Minima
 header_pages:
