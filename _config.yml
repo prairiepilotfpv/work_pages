@@ -59,6 +59,7 @@ header_pages:
 #
 exclude:
   - index.markdown
+  - al-folio/
 #   - .sass-cache/y
 #   - .jekyll-cache/
 #   - gemfiles/
