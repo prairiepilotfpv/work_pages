@@ -29,9 +29,9 @@ github_username:  jekyll
 show_blog_on_home: false # set to true to display blog posts on the home page
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Add header pages to control nav order in Minima
 header_pages:
