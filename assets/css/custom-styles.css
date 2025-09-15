@@ -1,0 +1,124 @@
+/* Custom site styles */
+.site-header {
+  background-color: #ff0000;
+  padding: 1.75rem 0;
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.site-title {
+  float: none !important;
+  margin: 0;
+  color: #0047ff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+/* Ensure the site title stays blue in all link states */
+a.site-title,
+a.site-title:link,
+a.site-title:visited,
+a.site-title:hover,
+a.site-title:active {
+  color: #0047ff;
+  text-decoration: none;
+}
+
+.site-nav {
+  margin-left: 0;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.site-nav .page-link,
+.site-nav .page-link:visited {
+  color: #0047ff;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: -1px 0 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.site-nav .page-link:hover,
+.site-nav .page-link:active {
+  color: #0047ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .site-header .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .site-nav {
+    position: static;
+    transform: none;
+  }
+}
+
+/* Footer overrides */
+.site-footer {
+  background-color: #0047ab;
+  padding: 2rem 0;
+}
+
+.site-footer,
+.site-footer a,
+.site-footer .footer-heading,
+.site-footer .contact-list li,
+.site-footer p {
+  color: #ff2d2d;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: -1px 0 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .wrapper {
+  text-align: center;
+}
+
+.site-footer .footer-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-footer .footer-col {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.site-footer .contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
