@@ -1,7 +1,10 @@
 /* Custom site styles */
 .site-header {
-  background-color: #ff0000;
+  background-color: #d80a0a;
   padding: 1.75rem 0;
+  /* remove Minima borders */
+  border-top: none;
+  border-bottom: none;
 }
 
 .site-header .wrapper {
@@ -122,3 +125,29 @@ a.site-title:active {
   flex-direction: column;
   align-items: center;
 }
+/* Home page layout */
+.home .post-list-heading,
+.home .rss-subscribe {
+  text-align: center;
+}
+
+.home .post-list {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.home .post-list li {
+  text-align: center;
+}
+
+
+/* Center headings */
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  text-align: center;
+}
+
